@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.container{
+    display: flex;
+    width: 50%;
+}
+
+.container .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 30px 35px;
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    border-radius:25px ;
+}
+
+.left h3{
+    font-size: 20px;
+    color: hsla(0, 0%, 100%,60%);
+}
+
+.left .overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    margin-top: 25px;
+}
+
+.overview h1{
+    font-size: 60px;
+    color: hsl(0, 0%, 100%);
+    padding: 0;
+    margin: 0;
+}
+
+.overview p{
+    font-size: 18px;
+    color: hsl(0, 0%, 100%,60%);
+    padding: 0;
+    margin: 0;
+}
+
+.left h2{
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    margin-top: 25px;
+    font-size: 23px;
+}
+
+.left .description{
+    text-align: center;
+    font-size: 18px;
+    color: hsla(0, 0%, 100%,60%);
+    margin-top: 15px;
+}
+
+.container .right{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px 35px;
+    padding-left:45px ;
+    border-top-right-radius: 25px;
+    box-shadow: 17px 10px 20px 0px hsl(221, 100%, 96%);
+    position: relative;
+    z-index: -1;
+    left: -10px;
+}
+
+.right .summaries{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.summaries .summary{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 13px 20px;
+    border-radius: 7px;
+    background-color: hsla(0, 100%, 67%,10%);
+    width: fit-content;
+}
+
+.summary .title{
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+
+
+.summary span img{
+    margin-right: 10px;
+}
+
+.summary .total{
+    color: hsla(224, 30%, 27%,50%);
+    font-weight: bold;
+}
+
+.summary .total .mark{
+    color: hsl(224, 30%, 27%);
+    margin-right: 4px;
+}
+
+.summaries .red{
+    background-color: hsla(0, 100%, 67%,10%);
+}
+
+.summaries .red .title{
+color: hsla(0, 100%, 67%);
+}
+
+.summaries .orange{
+    background-color: hsla(39, 100%, 56%,10%);
+}
+
+.summaries .orange .title{
+    color: hsl(39, 100%, 56%);
+}
+
+.summaries .green{
+    background-color: hsla(166, 100%, 37%,10%);
+}
+
+.summaries .green .title{
+    color: hsl(166, 100%, 37%);
+}
+
+.summaries .blue{
+    background-color: hsla(234, 85%, 45%,10%);
+}
+
+.summaries .blue .title{
+    color: hsl(234, 85%, 45%);
+}
+
+.contine-btn{
+    border: none;
+    outline: none;
+    padding: 15px;
+    background: hsl(224, 30%, 27%);
+    border-radius: 30px;
+    color: hsl(0, 0%, 100%);
+    margin-top: 15px;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.right button:hover{
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+@media screen and (max-width:375px){
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container .left{
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        padding: 40px 35px;
+    }
+
+    .container .right{
+        width: 100%;
+        position: absolute;
+        top: 390px;
+        padding: 30px;
+        padding-left: 40px;
+        box-shadow: none;
+    }
+
+    .summaries .summary{
+        width: 80%;
+        gap: 24vw;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:650px){
+    .container{
+        width: 100%;
+    }
+}
+
